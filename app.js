@@ -5,6 +5,7 @@ const searchBtn = document.getElementById('search-btn');
 const sliderBtn = document.getElementById('create-slider');
 const sliderContainer = document.getElementById('sliders');
 const resultValue = document.getElementById('show-search-result');
+const hideResult = document.getElementById('total-result');
 // selected image 
 let sliders = [];
 
@@ -74,7 +75,9 @@ const selectItem = (event, img) => {
   }
 }
 var timer
+
 const createSlider = () => {
+  hideResult.innerText = '';
   // check slider image length
   if (sliders.length < 2) {
     alert('Select at least 2 image.')
